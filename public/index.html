@@ -44,7 +44,7 @@
       const redirectPath = window.location.pathname;
       if (redirectPath !== '/') {
         window.history.replaceState({}, '', '/');
-        window.location.hash = redirectPath;
+        window.location.replace(redirectPath);
       }
     })();
   </script>
