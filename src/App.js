@@ -5,6 +5,14 @@ import ProductDetail from './components/productDetail';
 import Login from './components/Login';
 
 function App() {
+
+  const queryPath = window.location.search.slice(1);
+
+  if (queryPath) {
+    // If there's a path in the query string, push it to history
+    window.history.replaceState({}, '', queryPath);
+  }
+  
   return (
     <div className="App">
       <BrowserRouter>
